@@ -16,7 +16,43 @@ public class Calculate {
 	public static void main(String[] args) {
 		System.out.println("Hello world");
 	}
-	
+
+	/**
+	 * Method add
+	 * @param first and second - two variables of type double
+	 * @return a sum of two variables
+	 */
+	public double add(double first, double second) {
+		return first + second;
+	}
+
+	/**
+	 * Method substract
+	 * @param first and second - two variables of type double
+	 * @return a residual
+	 */
+	public double substract(double first, double second) {
+		return first - second;
+	}
+
+	/**
+	 * Method div
+	 * @param first and second - two variables of type double
+	 * @return quotient
+	 */
+	public double div(double first, double second) {
+		return first / second;
+	}
+
+	/**
+	 * Method multiply
+	 * @param first and second - two variables of type double
+	 * @return product
+	 */
+	public double multiply(double first, double second) {
+		return first * second;
+	}
+
 	/**
 	* Method echo
 	* @param name is a String to be echoed
