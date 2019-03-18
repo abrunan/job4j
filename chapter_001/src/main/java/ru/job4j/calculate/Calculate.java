@@ -10,14 +10,6 @@ package ru.job4j.calculate;
 public class Calculate {
 	
 	/**
-	* Method main() is the entry point to the application
-	* @param args - an array of Strings passed from the console
-	*/
-	public static void main(String[] args) {
-		System.out.println("Hello world");
-	}
-
-	/**
 	 * Method add
 	 * @param first and second - two variables of type double
 	 * @return a sum of two variables
