@@ -1,5 +1,4 @@
 # job4j
 I'm studying the course job4j.
-I'm gonna set small goals and achieve them step by step.
-First small goal is to complete the "Intern" module.
-I intend to achieve it by the end of march.
+My goal is to finish this course by September 2019.
+And hopefully get a java developer job by the end of the year.
