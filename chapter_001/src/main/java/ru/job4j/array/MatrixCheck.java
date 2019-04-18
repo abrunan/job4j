@@ -13,7 +13,7 @@ public class MatrixCheck {
                 break;
             }
         }
-        result = result && (data[data.length / 2][data.length / 2] == data[0][0]);
+
         return result;
     }
 }
