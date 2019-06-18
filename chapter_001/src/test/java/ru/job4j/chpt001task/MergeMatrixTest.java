@@ -10,8 +10,8 @@ public class MergeMatrixTest {
     @Test
     public void when13and24Then1234() {
         MergeMatrix merMat = new MergeMatrix();
-        int[] left = new int[] {1,3};
-        int[] right = new int[] {2,4};
+        int[] left = new int[] {1, 3};
+        int[] right = new int[] {2, 4};
         int[] result = merMat.merge(left, right);
         int[] expect = {1, 2, 3, 4};
 
@@ -21,8 +21,8 @@ public class MergeMatrixTest {
     @Test
     public void when1356and44Then123456() {
         MergeMatrix merMat = new MergeMatrix();
-        int[] left = new int[] {1,3, 5, 6};
-        int[] right = new int[] {4,4};
+        int[] left = new int[] {1, 3, 5, 6};
+        int[] right = new int[] {4, 4};
         int[] result = merMat.merge(left, right);
         int[] expect = {1, 3, 4, 4, 5, 6};
 

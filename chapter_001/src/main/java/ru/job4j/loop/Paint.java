@@ -9,15 +9,16 @@ import java.util.function.BiPredicate;
 
 public class Paint {
 
-    public String loopBy (int height, int width, BiPredicate<Integer, Integer> predicate) {
+    public String loopBy(int height, int width, BiPredicate<Integer, Integer> predicate) {
         StringBuilder screen = new StringBuilder();
 
         for (int row = 0; row < height; row++) {
             for (int column = 0; column < width; column++) {
-                if (predicate.test(row, column))
+                if (predicate.test(row, column)) {
                     screen.append("^");
-                else
+                } else {
                     screen.append(" ");
+                }
             }
             screen.append(System.lineSeparator());
         }

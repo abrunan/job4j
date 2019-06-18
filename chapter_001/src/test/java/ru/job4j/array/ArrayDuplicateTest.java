@@ -10,7 +10,7 @@ public class ArrayDuplicateTest {
     @Test
     public void whenRemoveThenArrayWithoutDup() {
         ArrayDuplicate arrDup = new ArrayDuplicate();
-        String[] input = {"1", "1", "1", "3" , "4", "1"};
+        String[] input = {"1", "1", "1", "3", "4", "1"};
         String[] result = arrDup.remove(input);
         String[] expect = {"1", "3", "4"};
 

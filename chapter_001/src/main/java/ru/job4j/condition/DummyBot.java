@@ -17,10 +17,11 @@ public class DummyBot {
      */
     public String answer(String question) {
         String ans = "Это ставит меня в тупик. Задайте другой вопрос.";
-        if ("Привет, Бот.".equals(question))
+        if ("Привет, Бот.".equals(question)) {
             ans = "Привет, умник.";
-        else if ("Пока.".equals(question))
+        } else if ("Пока.".equals(question)) {
             ans = "До скорой встречи.";
+        }
 
         return ans;
     }

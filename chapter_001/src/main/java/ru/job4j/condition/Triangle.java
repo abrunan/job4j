@@ -39,8 +39,8 @@ public class Triangle {
         double c = new Point().distance(x2, y2, x3, y3);
         double p = semiperim(a, b, c);
 
-        return this.exist(a, b, c) ?
-                Math.sqrt(p * (p - a) * (p - b) * (p - c)) :
-                -1;
+        return this.exist(a, b, c)
+                ? Math.sqrt(p * (p - a) * (p - b) * (p - c))
+                : -1;
     }
 }

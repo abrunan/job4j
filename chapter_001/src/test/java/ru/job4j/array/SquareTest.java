@@ -23,7 +23,7 @@ public class SquareTest {
     }
 
     @Test
-    public void when5Then1_25() {
+    public void when5ThenFrom1To25() {
         Square square = new Square();
         int[] result = square.calculate(5);
         int[] expected = new int[] {1, 4, 9, 16, 25};

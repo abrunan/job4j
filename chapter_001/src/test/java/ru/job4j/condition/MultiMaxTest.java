@@ -10,7 +10,7 @@ public class MultiMaxTest {
     public void when142Then4() {
         MultiMax mMax = new MultiMax();
         int result = mMax.max(1, 4, 2);
-        assertThat(result, is (4));
+        assertThat(result, is(4));
     }
 
     @Test
@@ -20,7 +20,7 @@ public class MultiMaxTest {
         int third = second - 1;
         MultiMax mMax = new MultiMax();
         int result = mMax.max(first, second, third);
-        assertThat(result, is (first));
+        assertThat(result, is(first));
     }
 
     @Test
@@ -30,25 +30,23 @@ public class MultiMaxTest {
         int third = first - 1;
         MultiMax mMax = new MultiMax();
         int result = mMax.max(first, second, third);
-        assertThat(result, is (second));
+        assertThat(result, is(second));
     }
 
     @Test
     public void whenThirdMax() {
         int third = 42;
-        int second = third -2;
+        int second = third - 2;
         int first = third - 1;
         MultiMax mMax = new MultiMax();
         int result = mMax.max(first, second, third);
-        assertThat(result, is (third));
+        assertThat(result, is(third));
     }
 
     @Test
     public void whenEqualThenThree() {
         MultiMax mMax = new MultiMax();
         int result = mMax.max(3, 3, 3);
-        assertThat(result, is (3));
+        assertThat(result, is(3));
     }
-
-
 }

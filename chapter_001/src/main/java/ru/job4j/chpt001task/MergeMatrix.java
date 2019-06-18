@@ -10,7 +10,7 @@ public class MergeMatrix {
         int indR = 0;
 
         while (indL < lengthL && indR < lengthR) {
-            if(left[indL] <= right[indR]) {
+            if (left[indL] <= right[indR]) {
                 result[indL + indR] = left[indL];
                 indL++;
             } else {
@@ -20,12 +20,12 @@ public class MergeMatrix {
         }
 
         if (indL >= lengthL) {
-            while(indR < lengthR) {
+            while (indR < lengthR) {
                 result[indL + indR] = right[indR];
                 indR++;
             }
         } else if (indR >= lengthR) {
-            while(indL < lengthL) {
+            while (indL < lengthL) {
                 result[indL + indR] = left[indL];
                 indL++;
             }
