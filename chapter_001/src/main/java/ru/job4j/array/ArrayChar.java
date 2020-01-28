@@ -1,11 +1,14 @@
 package ru.job4j.array;
 
 /**
- * Wrapper class for String
+ * Wrapper class for String.
  */
 public class ArrayChar {
     private char[] data;
 
+    /**
+     * Javadoc comment.
+     */
     public ArrayChar(String line) {
         this.data = line.toCharArray();
     }
