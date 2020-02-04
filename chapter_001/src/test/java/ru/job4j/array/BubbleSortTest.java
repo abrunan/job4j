@@ -14,5 +14,4 @@ public class BubbleSortTest {
         int[] expect = {0, 1, 4, 5, 6, 7, 8, 8, 8, 10};
         assertThat(data, is(expect));
     }
-
 }

@@ -8,8 +8,6 @@ public class Counter {
                 result += i;
             }
         }
-
         return result;
     }
-
 }

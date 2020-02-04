@@ -29,7 +29,6 @@ public class PaintTest {
                         .toString()
                 )
         );
-
     }
 
     @Test

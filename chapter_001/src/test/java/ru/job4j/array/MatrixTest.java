@@ -15,8 +15,6 @@ public class MatrixTest {
                 {2, 4, 6},
                 {3, 6, 9}
         };
-
         assertThat(result, is(expect));
     }
-
 }

@@ -22,7 +22,6 @@ public class ConverterTest {
         Converter conv = new Converter();
         int result = conv.rubleToEuro(70);
         assertThat(result, is(1));
-
     }
 
     /**
@@ -33,7 +32,6 @@ public class ConverterTest {
         Converter conv = new Converter();
         int result = conv.rubleToDollar(60);
         assertThat(result, is(1));
-
     }
 
     /**
@@ -44,7 +42,6 @@ public class ConverterTest {
         Converter conv = new Converter();
         int result = conv.euroToRuble(1);
         assertThat(result, is(70));
-
     }
 
     /**
@@ -55,7 +52,6 @@ public class ConverterTest {
         Converter conv = new Converter();
         int result = conv.dollarToRuble(1);
         assertThat(result, is(60));
-
     }
 
 }

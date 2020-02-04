@@ -22,7 +22,6 @@ public class Paint {
             }
             screen.append(System.lineSeparator());
         }
-
         return screen.toString();
     }
 
@@ -49,5 +48,4 @@ public class Paint {
                 (row, column) -> column >= height - row - 1 && column <= height + row - 1
         );
     }
-
 }

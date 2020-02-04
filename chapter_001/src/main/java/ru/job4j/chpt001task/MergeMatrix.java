@@ -1,6 +1,13 @@
 package ru.job4j.chpt001task;
 
 public class MergeMatrix {
+
+    /**
+     * Merge two sorted matrix's
+     * @param left - first matrix
+     * @param right - second matrix
+     * @return merged matrix
+     */
     int[] merge(int[] left, int[] right) {
         int lengthL = left.length;
         int lengthR = right.length;
@@ -8,7 +15,6 @@ public class MergeMatrix {
 
         int indL = 0;
         int indR = 0;
-
         while (indL < lengthL && indR < lengthR) {
             if (left[indL] <= right[indR]) {
                 result[indL + indR] = left[indL];
@@ -18,7 +24,6 @@ public class MergeMatrix {
                 indR++;
             }
         }
-
         if (indL >= lengthL) {
             while (indR < lengthR) {
                 result[indL + indR] = right[indR];

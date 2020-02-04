@@ -69,5 +69,4 @@ public class CalculateTest {
 		double expect = 2d;
 		assertThat(result, is(expect));
 	}
-
 }

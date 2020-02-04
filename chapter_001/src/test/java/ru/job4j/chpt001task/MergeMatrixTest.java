@@ -14,7 +14,6 @@ public class MergeMatrixTest {
         int[] right = new int[] {2, 4};
         int[] result = merMat.merge(left, right);
         int[] expect = {1, 2, 3, 4};
-
         assertThat(result, is(expect));
     }
 
@@ -25,7 +24,6 @@ public class MergeMatrixTest {
         int[] right = new int[] {4, 4};
         int[] result = merMat.merge(left, right);
         int[] expect = {1, 3, 4, 4, 5, 6};
-
         assertThat(result, is(expect));
     }
 }

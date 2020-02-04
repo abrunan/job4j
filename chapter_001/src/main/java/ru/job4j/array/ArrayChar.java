@@ -21,14 +21,12 @@ public class ArrayChar {
     public boolean startWith(String prefix) {
         boolean result = true;
         char[] pref = prefix.toCharArray();
-
         for (int i = 0; i < pref.length; i++) {
             if (pref[i] != this.data[i]) {
                 result = false;
                 break;
             }
         }
-
         return result;
     }
 }

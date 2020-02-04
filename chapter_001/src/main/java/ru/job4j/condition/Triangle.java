@@ -3,7 +3,6 @@ package ru.job4j.condition;
 public class Triangle {
     /**
      * Calculate semi-perimeter by triangle's sides.
-     *
      * Formula:
      * (a + b + c) / 2
      *
@@ -38,7 +37,6 @@ public class Triangle {
         double b = new Point().distance(x1, y1, x3, y3);
         double c = new Point().distance(x2, y2, x3, y3);
         double p = semiperim(a, b, c);
-
         return this.exist(a, b, c)
                 ? Math.sqrt(p * (p - a) * (p - b) * (p - c))
                 : -1;
