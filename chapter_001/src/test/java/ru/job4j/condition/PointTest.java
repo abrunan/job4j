@@ -8,8 +8,9 @@ public class PointTest {
 
     @Test
     public void whenZeroAndTenThenTen() {
-        Point point = new Point();
-        double result = point.distance(0, 0, 0, 10);
+        Point point0 = new Point(0,0);
+        Point point1 = new Point(0,10);
+        double result = point0.distance(point1);
         double expect = 10D;
         assertThat(result, is(expect));
     }
