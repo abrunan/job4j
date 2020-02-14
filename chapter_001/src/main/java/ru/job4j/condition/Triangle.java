@@ -1,6 +1,15 @@
 package ru.job4j.condition;
 
 public class Triangle {
+    private Point first;
+    private Point second;
+    private Point third;
+
+    public Triangle (Point a, Point b, Point c) {
+        this.first = a;
+        this.second = b;
+        this.third = c;
+    }
     /**
      * Calculate semi-perimeter by triangle's sides.
      * Formula:
@@ -29,16 +38,12 @@ public class Triangle {
     /**
      * Calculate triangle's area by Heron's formula
      *
-     * @param x1, y1, ..., x3,g y3 - coordinates of points
      * @return triangle's area if it exists, -1 if not
      */
-    public double area(int x1, int y1, int x2, int y2, int x3, int y3) {
-        Point pOne = new Point(x1, y1);
-        Point pTwo = new Point(x2, y2);
-        Point pThree = new Point(x3, y3);
-        double a = pOne.distance(pTwo);
-        double b = pOne.distance(pThree);
-        double c = pTwo.distance(pThree);
+    public double area() {
+        double a = first.distance(second);
+        double b = first.distance(third);
+        double c = second.distance(third);
         double p = semiperim(a, b, c);
         return this.exist(a, b, c)
                 ? Math.sqrt(p * (p - a) * (p - b) * (p - c))
