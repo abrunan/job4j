@@ -68,9 +68,9 @@ public class Tracker {
         if (found) {
             int size = position - index;
             System.arraycopy(items, index + 1, items, index, size);
+            items[position - 1] = null;
+            position--;
         }
-        items[position - 1] = null;
-        position--;
         return found;
     }
 }
