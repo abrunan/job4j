@@ -7,9 +7,10 @@ public class Matches {
         Scanner input = new Scanner(System.in);
         int left = 11;
         int player = 0;
+        String sep = System.lineSeparator();
         while (left > 0) {
-            System.out.println("\nThere are " + left + " matches at the table."
-                    + "\nPlayer " + (player % 2 + 1) + ". How many matches do you wish to pull?");
+            System.out.println(sep + "There are " + left + " matches at the table."
+                    + sep + "Player " + (player % 2 + 1) + ". How many matches do you wish to pull?");
             int pulled = Integer.parseInt(input.nextLine());
             boolean valid = (pulled > 0 && pulled < 4 && pulled <= left);
             if (!valid) {
