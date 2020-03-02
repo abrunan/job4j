@@ -39,10 +39,32 @@ public class StartUI {
                 }
                 showItems(tracker);
             } else if (select == 4) {
-
+                System.out.println("=== Find an item by id ===");
+                System.out.print("Enter id of the item: ");
+                String id = scanner.nextLine();
+                Item item = tracker.findById(id);
+                if (item == null) {
+                    System.out.println("Item with such id is not found. Try again.");
+                } else {
+                    System.out.printf("Item is found: %s", item.getName());
+                    System.out.println();
+                }
             } else if (select == 5) {
-
+                System.out.println("=== Find an item by name ===");
+                System.out.print("Enter name of the item: ");
+                String id = scanner.nextLine();
+                Item[] items = tracker.findByName(id);
+                if (items == null || items.length == 0) {
+                    System.out.println("No item with such name is not found. Try again.");
+                } else {
+                    System.out.println("Items found:");
+                    for (Item item : items) {
+                        System.out.printf("%s\t\t\t%s", item.getName(), item.getId());
+                        System.out.println();
+                    }
+                }
             } else if (select == 6) {
+                System.out.println("Exiting program...");
                 run = false;
             } else {
                 System.out.println("Invalid number. Returning to menu...");
