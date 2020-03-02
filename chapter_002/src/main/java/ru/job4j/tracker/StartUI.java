@@ -55,7 +55,7 @@ public class StartUI {
                 String id = scanner.nextLine();
                 Item[] items = tracker.findByName(id);
                 if (items == null || items.length == 0) {
-                    System.out.println("No item with such name is not found. Try again.");
+                    System.out.println("No item with such name is found. Try again.");
                 } else {
                     System.out.println("Items found:");
                     for (Item item : items) {
