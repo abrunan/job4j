@@ -82,7 +82,6 @@ public class StartUI {
     }
 
     public static void main(String[] args) {
-        String ls = System.lineSeparator();
         Input input = new ConsoleInput();
         Tracker tracker = new Tracker();
         new StartUI().init(input, tracker);
