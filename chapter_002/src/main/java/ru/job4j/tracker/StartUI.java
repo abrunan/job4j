@@ -11,13 +11,12 @@ public class StartUI {
     public static void replaceItem(Input input, Tracker tracker){
         System.out.println("=== Edit an item ===");
         String id = input.askString("Enter id of the item to de edited: ");
-        String name = input.askString("Enter the new name for the item: ");
+        String name = input.askString("Enter new name for the item: ");
         if (tracker.replace(id, new Item(name))) {
             System.out.println("Edited successfully!");
         } else {
-            System.out.println("Invalid id or name... Item couldn't be edited.");
+            System.out.println("Invalid id or name, item couldn't be edited.");
         }
-        showItems(tracker.findAll());
     }
 
     public static void deleteItem(Input input, Tracker tracker) {
@@ -26,9 +25,8 @@ public class StartUI {
         if (tracker.delete(id)) {
             System.out.println("Deleted successfully!");
         } else {
-            System.out.println("Invalid id, item couldn't be deleted...");
+            System.out.println("Invalid id, item couldn't be deleted.");
         }
-        showItems(tracker.findAll());
     }
 
     public static void findItemName(Input input, Tracker tracker) {
