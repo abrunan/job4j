@@ -4,14 +4,15 @@ package ru.job4j.converter;
  * Class Converter
  *
  * @author abrunan
- * @since 06.03.2019
  * @version 1
+ * @since 06.03.2019
  */
 
 public class Converter {
 
     /**
      * Convert rubles to euros
+     *
      * @param value to be converted
      * @return euros
      */
@@ -21,6 +22,7 @@ public class Converter {
 
     /**
      * Convert rubles to USD
+     *
      * @param value to be converted
      * @return dollars
      */
@@ -30,6 +32,7 @@ public class Converter {
 
     /**
      * Convert euros to rubles
+     *
      * @param value to be converted
      * @return rubles
      */
@@ -39,6 +42,7 @@ public class Converter {
 
     /**
      * Convert US dollars to rubles
+     *
      * @param value to be converted
      * @return rubles
      */

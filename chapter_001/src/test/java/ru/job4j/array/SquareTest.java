@@ -1,8 +1,9 @@
 package ru.job4j.array;
 
 import org.junit.Test;
-import static org.junit.Assert.assertThat;
+
 import static org.hamcrest.core.Is.is;
+import static org.junit.Assert.assertThat;
 
 public class SquareTest {
 
@@ -10,7 +11,7 @@ public class SquareTest {
     public void when3Then149() {
         Square square = new Square();
         int[] result = square.calculate(3);
-        int[] expected = new int[] {1, 4, 9};
+        int[] expected = new int[]{1, 4, 9};
         assertThat(result, is(expected));
     }
 
@@ -26,7 +27,7 @@ public class SquareTest {
     public void when5ThenFrom1To25() {
         Square square = new Square();
         int[] result = square.calculate(5);
-        int[] expected = new int[] {1, 4, 9, 16, 25};
+        int[] expected = new int[]{1, 4, 9, 16, 25};
         assertThat(result, is(expected));
     }
 }

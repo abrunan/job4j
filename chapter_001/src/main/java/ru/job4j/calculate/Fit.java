@@ -7,6 +7,7 @@ public class Fit {
 
     /**
      * Идеальный вес для мужчины
+     *
      * @param height Рост
      * @return идеальнвй вес
      */
@@ -16,6 +17,7 @@ public class Fit {
 
     /**
      * Идеальный вес для женщины
+     *
      * @param height Рост
      * @return идеальнвй вес
      */

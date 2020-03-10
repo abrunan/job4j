@@ -15,6 +15,7 @@ public class Tracker {
         items[position++] = item;
         return item;
     }
+
     private String generateId() {
         Random rand = new Random();
         return String.valueOf(rand.nextLong() + System.currentTimeMillis());

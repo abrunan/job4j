@@ -8,7 +8,7 @@ public class StartUI {
         tracker.add(new Item(name));
     }
 
-    public static void replaceItem(Input input, Tracker tracker){
+    public static void replaceItem(Input input, Tracker tracker) {
         System.out.println("=== Edit an item ===");
         String id = input.askString("Enter id of the item to de edited: ");
         String name = input.askString("Enter new name for the item: ");
@@ -53,12 +53,25 @@ public class StartUI {
         }
     }
 
+    private static void showItems(Item[] all) {
+        for (Item current : all) {
+            System.out.printf("Item: %s\t\t\tid: %s", current.getName(), current.getId());
+            System.out.println();
+        }
+    }
+
+    public static void main(String[] args) {
+        Input input = new ConsoleInput();
+        Tracker tracker = new Tracker();
+        new StartUI().init(input, tracker);
+    }
+
     public void init(Input input, Tracker tracker) {
         boolean run = true;
         while (run) {
             this.showMenu();
             int select = input.askInt("Select: ");
-            if(select == 0) {
+            if (select == 0) {
                 createItem(input, tracker);
             } else if (select == 1) {
                 showItems(tracker.findAll());
@@ -79,13 +92,6 @@ public class StartUI {
         }
     }
 
-    private static void showItems(Item[] all) {
-        for (Item current : all) {
-            System.out.printf("Item: %s\t\t\tid: %s", current.getName(), current.getId());
-            System.out.println();
-        }
-    }
-
     private void showMenu() {
         String ls = System.lineSeparator();
         System.out.println("Menu:");
@@ -96,11 +102,5 @@ public class StartUI {
                 "4. Find item by Id" + ls +
                 "5. Find item by name" + ls +
                 "6. Exit Program");
-    }
-
-    public static void main(String[] args) {
-        Input input = new ConsoleInput();
-        Tracker tracker = new Tracker();
-        new StartUI().init(input, tracker);
     }
 }

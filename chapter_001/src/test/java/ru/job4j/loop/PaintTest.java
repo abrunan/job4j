@@ -4,11 +4,12 @@ import org.junit.Test;
 
 import java.util.StringJoiner;
 
-import static org.junit.Assert.assertThat;
 import static org.hamcrest.core.Is.is;
+import static org.junit.Assert.assertThat;
 
 /**
  * The test class for Paint
+ *
  * @author Hunan Abrahamyan (abrunan@yandex.ru)
  * @version $Id$
  */

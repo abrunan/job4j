@@ -6,9 +6,20 @@ public class Profession {
     private String education;
     private String birthday;
 
-    public String getName() { return name; }
-    public String getsurName() { return surname; }
-    public String getEducation() { return education; }
-    public String getBirthday() { return birthday; }
+    public String getName() {
+        return name;
+    }
+
+    public String getsurName() {
+        return surname;
+    }
+
+    public String getEducation() {
+        return education;
+    }
+
+    public String getBirthday() {
+        return birthday;
+    }
 }
 

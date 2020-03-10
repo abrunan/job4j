@@ -3,15 +3,17 @@ package ru.job4j.condition;
 /**
  * Class DummyBot
  * Practicing conditional operators.
+ *
  * @author abrunan
- * @since 20.03.2019
  * @version 1
+ * @since 20.03.2019
  */
 
 public class DummyBot {
 
     /**
      * Answers to questions
+     *
      * @param question Your question
      * @return An answer to your questions
      */

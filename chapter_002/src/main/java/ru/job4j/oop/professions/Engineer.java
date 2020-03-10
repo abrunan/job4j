@@ -1,7 +1,9 @@
 package ru.job4j.oop.professions;
 
 public class Engineer extends Profession {
-    public String getName() {return super.getName();}
+    public String getName() {
+        return super.getName();
+    }
 
     @Override
     public String getsurName() {

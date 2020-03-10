@@ -9,9 +9,10 @@ import static org.junit.Assert.assertThat;
  * Class DummyBotTest
  * Test class for DummyBot
  * Practicing conditional operators.
+ *
  * @author abrunan
- * @since 20.03.2019
  * @version 1
+ * @since 20.03.2019
  */
 
 public class DummyBotTest {

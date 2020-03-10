@@ -4,16 +4,6 @@ public class Cat {
     private String food;
     private String name;
 
-    public void eat (String meat) {
-        this.food = meat;
-    }
-    public void giveNick(String nick) {
-        this.name = nick;
-    }
-    public void show () {
-        System.out.println(this.name + " eats " + this.food);
-    }
-
     public static void main(String[] args) {
         Cat gav = new Cat();
         gav.giveNick("Gav");
@@ -23,5 +13,17 @@ public class Cat {
         black.giveNick("Big black cat");
         black.eat("fish");
         black.show();
+    }
+
+    public void eat(String meat) {
+        this.food = meat;
+    }
+
+    public void giveNick(String nick) {
+        this.name = nick;
+    }
+
+    public void show() {
+        System.out.println(this.name + " eats " + this.food);
     }
 }

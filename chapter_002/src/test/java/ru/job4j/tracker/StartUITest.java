@@ -1,8 +1,9 @@
 package ru.job4j.tracker;
 
 import org.junit.Test;
-import static org.junit.Assert.assertThat;
+
 import static org.hamcrest.core.Is.is;
+import static org.junit.Assert.assertThat;
 
 public class StartUITest {
 
@@ -37,7 +38,7 @@ public class StartUITest {
         Tracker tracker = new Tracker();
         Item item = new Item("Bruh!");
         tracker.add(item);
-        String[] answer = { item.getId() };
+        String[] answer = {item.getId()};
         Input input = new StubInput(answer);
         StartUI.deleteItem(input, tracker);
         String expected = null;

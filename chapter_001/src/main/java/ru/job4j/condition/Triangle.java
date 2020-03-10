@@ -5,11 +5,12 @@ public class Triangle {
     private Point second;
     private Point third;
 
-    public Triangle (Point a, Point b, Point c) {
+    public Triangle(Point a, Point b, Point c) {
         this.first = a;
         this.second = b;
         this.third = c;
     }
+
     /**
      * Calculate semi-perimeter by triangle's sides.
      * Formula:
@@ -26,6 +27,7 @@ public class Triangle {
 
     /**
      * Check if a triangle with such sides exists
+     *
      * @param a distance between points A and B
      * @param b distance between points A and C
      * @param c distance between points B and C

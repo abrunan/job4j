@@ -1,7 +1,9 @@
 package ru.job4j.oop.professions;
 
 public class Surgeon extends Doctor {
-    public String getName() {return super.getName();}
+    public String getName() {
+        return super.getName();
+    }
 
     @Override
     public void makeDiagnose(Patient patient) {

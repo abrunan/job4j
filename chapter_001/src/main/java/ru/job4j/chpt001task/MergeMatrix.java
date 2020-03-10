@@ -4,7 +4,8 @@ public class MergeMatrix {
 
     /**
      * Merge two sorted matrix's
-     * @param left - first matrix
+     *
+     * @param left  - first matrix
      * @param right - second matrix
      * @return merged matrix
      */

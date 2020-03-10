@@ -15,6 +15,7 @@ public class ArrayChar {
 
     /**
      * Check if the string starts with the prefix
+     *
      * @param prefix - the prefix to check for
      * @return true if the string starts with the prefix, false in the other case
      */

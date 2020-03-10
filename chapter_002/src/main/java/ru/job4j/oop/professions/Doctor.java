@@ -1,7 +1,9 @@
 package ru.job4j.oop.professions;
 
 public class Doctor extends Profession {
-    public String getName() {return super.getName();}
+    public String getName() {
+        return super.getName();
+    }
 
     public void makeDiagnose(Patient patient) {
         if (!patient.isDiagnosed) {
