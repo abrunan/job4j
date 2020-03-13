@@ -1,106 +1,37 @@
 package ru.job4j.tracker;
 
 public class StartUI {
-
-    public static void createItem(Input input, Tracker tracker) {
-        System.out.println("=== Create a new item ===");
-        String name = input.askString("Enter a name for a new item: ");
-        tracker.add(new Item(name));
-    }
-
-    public static void replaceItem(Input input, Tracker tracker) {
-        System.out.println("=== Edit an item ===");
-        String id = input.askString("Enter id of the item to de edited: ");
-        String name = input.askString("Enter new name for the item: ");
-        if (tracker.replace(id, new Item(name))) {
-            System.out.println("Edited successfully!");
-        } else {
-            System.out.println("Invalid id or name, item couldn't be edited.");
-        }
-    }
-
-    public static void deleteItem(Input input, Tracker tracker) {
-        System.out.println("=== Delete an item ===");
-        String id = input.askString("Enter id of the item to de deleted: ");
-        if (tracker.delete(id)) {
-            System.out.println("Deleted successfully!");
-        } else {
-            System.out.println("Invalid id, item couldn't be deleted.");
-        }
-    }
-
-    public static void findItemName(Input input, Tracker tracker) {
-        System.out.println("=== Find an item by name ===");
-        String id = input.askString("Enter name of the item: ");
-        Item[] items = tracker.findByName(id);
-        if (items == null || items.length == 0) {
-            System.out.println("No item with such name is found. Try again.");
-        } else {
-            System.out.println("Items found:");
-            showItems(items);
-        }
-    }
-
-    public static void findItemId(Input input, Tracker tracker) {
-        System.out.println("=== Find an item by id ===");
-        String id = input.askString("Enter id of the item: ");
-        Item item = tracker.findById(id);
-        if (item == null) {
-            System.out.println("Item with such id is not found. Try again.");
-        } else {
-            System.out.printf("Item is found: %s", item.getName());
-            System.out.println();
-        }
-    }
-
-    private static void showItems(Item[] all) {
-        for (Item current : all) {
-            System.out.printf("Item: %s\t\t\tid: %s", current.getName(), current.getId());
-            System.out.println();
-        }
-    }
-
     public static void main(String[] args) {
         Input input = new ConsoleInput();
         Tracker tracker = new Tracker();
-        new StartUI().init(input, tracker);
+        UserAction[] actions = {
+                new CreateAction(),
+                new ShowAllAction(),
+                new ReplaceAction(),
+                new DeleteAction(),
+                new FindIdAction(),
+                new FindNameAction(),
+                new ExitAction()
+        };
+        new StartUI().init(input, tracker, actions);
     }
 
-    public void init(Input input, Tracker tracker) {
+    public void init(Input input, Tracker tracker, UserAction[] actions) {
         boolean run = true;
         while (run) {
-            this.showMenu();
-            int select = input.askInt("Select: ");
-            if (select == 0) {
-                createItem(input, tracker);
-            } else if (select == 1) {
-                showItems(tracker.findAll());
-            } else if (select == 2) {
-                replaceItem(input, tracker);
-            } else if (select == 3) {
-                deleteItem(input, tracker);
-            } else if (select == 4) {
-                findItemId(input, tracker);
-            } else if (select == 5) {
-                findItemName(input, tracker);
-            } else if (select == 6) {
-                System.out.println("Exiting program...");
-                run = false;
-            } else {
-                System.out.println("Invalid number. Returning to menu...");
-            }
+            this.showMenu(actions);
+            int select = input.askInt("Select action: ");
+            UserAction action = actions[select];
+            run = action.execute(input, tracker);
         }
     }
 
-    private void showMenu() {
-        String ls = System.lineSeparator();
+    private void showMenu(UserAction[] actions) {
         System.out.println("Menu:");
-        System.out.println("0. Add new Item" + ls +
-                "1. Show all items" + ls +
-                "2. Edit item" + ls +
-                "3. Delete item" + ls +
-                "4. Find item by Id" + ls +
-                "5. Find item by name" + ls +
-                "6. Exit Program");
+        for (int i = 0; i < actions.length; i++) {
+            System.out.printf("%s. %s", i, actions[i].name());
+            System.out.println();
+        }
+
     }
 }
