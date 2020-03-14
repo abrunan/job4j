@@ -21,7 +21,6 @@ public class Tracker {
         return String.valueOf(rand.nextLong() + System.currentTimeMillis());
     }
 
-
     public Item[] findAll() {
         return Arrays.copyOf(items, position);
     }

@@ -32,6 +32,5 @@ public class StartUI {
             System.out.printf("%s. %s", i, actions[i].name());
             System.out.println();
         }
-
     }
 }
