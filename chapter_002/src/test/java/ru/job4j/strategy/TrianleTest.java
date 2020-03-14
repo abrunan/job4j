@@ -1,7 +1,6 @@
-package strategy;
+package ru.job4j.strategy;
 
 import org.junit.Test;
-import ru.job4j.strategy.Triangle;
 
 import java.util.StringJoiner;
 

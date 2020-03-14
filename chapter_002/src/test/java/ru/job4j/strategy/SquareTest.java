@@ -1,26 +1,16 @@
-package strategy;
+package ru.job4j.strategy;
 
 import org.junit.Test;
-import ru.job4j.strategy.Paint;
-import ru.job4j.strategy.Square;
 
-import java.io.ByteArrayOutputStream;
-import java.io.OutputStream;
-import java.io.PrintStream;
 import java.util.StringJoiner;
-
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
-
-public class PaintTest {
+public class SquareTest {
     @Test
-    public void whenPaintSquare() {
-        PrintStream sdtOut = System.out;
-        ByteArrayOutputStream out = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(out));
-        new Paint().draw(new Square());
-        assertThat(new String(out.toByteArray()),
+    public void whenDrawSquare() {
+        Square sq = new Square();
+        assertThat(sq.draw(),
                 is(
                         new StringJoiner(System.lineSeparator())
                                 .add("*********")
@@ -30,6 +20,5 @@ public class PaintTest {
                                 .add("*********")
                                 .toString()
                 ));
-        System.setOut(sdtOut);
     }
 }
