@@ -10,8 +10,7 @@ public class ShowAllAction implements UserAction {
     public boolean execute(Input input, Tracker tracker) {
         System.out.println(this.name());
         for (Item current : tracker.findAll()) {
-            System.out.printf("Item: %s\t\t\tid: %s", current.getName(), current.getId());
-            System.out.println();
+            System.out.println(String.format("%s: %s", current.getId(), current.getName()));
         }
         return true;
     }

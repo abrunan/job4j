@@ -8,7 +8,7 @@ import static org.junit.Assert.assertThat;
 public class StartUITest {
 
     @Test
-    public void whenExit() {
+    public void whenInitExit() {
         StubInput input = new StubInput(
                 new String[] {"0"}
                 );
