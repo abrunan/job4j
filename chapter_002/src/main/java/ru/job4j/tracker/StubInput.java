@@ -17,4 +17,9 @@ public class StubInput implements Input {
     public int askInt(String message) {
         return Integer.parseInt(askString(message));
     }
+
+    @Override
+    public int askInt(String message, int max) {
+        return askInt(message);
+    }
 }

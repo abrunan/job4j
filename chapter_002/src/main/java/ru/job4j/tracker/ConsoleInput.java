@@ -16,4 +16,14 @@ public class ConsoleInput implements Input {
     public int askInt(String message) {
         return Integer.parseInt(askString(message));
     }
+
+    @Override
+    public int askInt(String message, int max) {
+        int select = askInt(message);
+        if (select >= 0 && select <= max) {
+            return select;
+        } else {
+            throw new IllegalStateException(String.format("Out of bounds: %s is not in [0, %s]", select, max));
+        }
+    }
 }

@@ -15,7 +15,6 @@ public class DeleteAction implements UserAction {
         } else {
             System.out.println("Invalid id, item couldn't be deleted.");
         }
-
         return true;
     }
 }
