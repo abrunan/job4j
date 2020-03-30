@@ -26,7 +26,7 @@ public class ValidateInputTest {
 
     @Test
     public void whenInvalidInput() {
-        String[] data = {"one"};
+        String[] data = {"one", "1"};
         ValidateStubInput input = new ValidateStubInput(data);
         input.askInt("Enter number");
         assertThat(
@@ -37,7 +37,7 @@ public class ValidateInputTest {
 
     @Test
     public void whenOutOfBounds() {
-        String[] data = {"7"};
+        String[] data = {"7", "1"};
         ValidateStubInput input = new ValidateStubInput(data);
         input.askInt("Enter number", 6);
         assertThat(

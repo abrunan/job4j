@@ -12,7 +12,6 @@ public class ValidateInput extends ConsoleInput {
                 invalid = false;
             } catch (IllegalStateException ise) {
                 System.out.println("The number is out of bounds. Please enter again.");
-                ;
             } catch (NumberFormatException nfe) {
                 System.out.println("It is not a number. Please enter again.");
             }
