@@ -27,22 +27,12 @@ public class ValidateInputTest {
     @Test
     public void whenInvalidInput() {
         String[] data = {"one", "1"};
-        ValidateStubInput input = new ValidateStubInput(data);
+        ValidateInput input = new ValidateInput(
+                new StubInput(data));
         input.askInt("Enter number");
         assertThat(
                 out.toString(),
                 is(String.format("It is not a number. Please enter again.%n"))
-        );
-    }
-
-    @Test
-    public void whenOutOfBounds() {
-        String[] data = {"7", "1"};
-        ValidateStubInput input = new ValidateStubInput(data);
-        input.askInt("Enter number", 6);
-        assertThat(
-                out.toString(),
-                is(String.format("The number is out of bounds. Please enter again.%n"))
         );
     }
 }
