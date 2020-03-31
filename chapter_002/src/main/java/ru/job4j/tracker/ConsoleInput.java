@@ -20,10 +20,9 @@ public class ConsoleInput implements Input {
     @Override
     public int askInt(String message, int max) {
         int select = askInt(message);
-        if (select >= 0 && select <= max) {
-            return select;
-        } else {
+        if (select < 0 || select > max) {
             throw new IllegalStateException(String.format("Out of bounds: %s is not in [0, %s]", select, max));
         }
+        return select;
     }
 }
