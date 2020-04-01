@@ -20,6 +20,10 @@ public class StubInput implements Input {
 
     @Override
     public int askInt(String message, int max) {
-        return askInt(message);
+        int res = askInt(message);
+        if (res < 0 || res > max) {
+            throw new IllegalStateException(String.format("Out of bounds: %s is not in [0, %s]", res, max));
+        }
+        return res;
     }
 }
