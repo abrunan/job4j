@@ -14,13 +14,11 @@ public class ValidateInputTest {
 
     @Before
     public void loadOutput() {
-        System.out.println("Execute before test");
         System.setOut(new PrintStream(out));
     }
 
     @After
     public void backOutput() {
-        System.out.println("Execute after test");
         System.setOut(sdtOut);
     }
 
