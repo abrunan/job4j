@@ -23,15 +23,15 @@ public class TrackerSinglesTest {
 
     @Test
     public void whenInnerSF() {
-        Tracker tracker0 = TrackerSingleInnerCl.getInstance();
-        Tracker tracker1 = TrackerSingleInnerCl.getInstance();
+        Tracker tracker0 = TrackerSingleSF.getInstance();
+        Tracker tracker1 = TrackerSingleSF.getInstance();
         assertSame(tracker0, tracker1);
     }
 
     @Test
     public void whenInnerSFF() {
-        Tracker tracker0 = TrackerSingleInnerCl.getInstance();
-        Tracker tracker1 = TrackerSingleInnerCl.getInstance();
+        Tracker tracker0 = TrackerSingleSFF.getInstance();
+        Tracker tracker1 = TrackerSingleSFF.getInstance();
         assertSame(tracker0, tracker1);
     }
 
