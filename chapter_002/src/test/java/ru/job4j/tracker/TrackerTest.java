@@ -2,6 +2,8 @@ package ru.job4j.tracker;
 
 import org.junit.Test;
 
+import java.util.List;
+
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.core.IsNull.nullValue;
 import static org.junit.Assert.assertThat;
@@ -26,10 +28,10 @@ public class TrackerTest {
         tracker.add(item0);
         tracker.add(item1);
         tracker.add(item2);
-        Item[] all = tracker.findAll();
-        assertThat(all[0].getName(), is(item0.getName()));
-        assertThat(all[1].getName(), is(item1.getName()));
-        assertThat(all[2].getName(), is(item2.getName()));
+        List<Item> all = tracker.findAll();
+        assertThat(all.get(0).getName(), is(item0.getName()));
+        assertThat(all.get(1).getName(), is(item1.getName()));
+        assertThat(all.get(2).getName(), is(item2.getName()));
     }
 
     @Test
@@ -41,7 +43,7 @@ public class TrackerTest {
         tracker.add(item0);
         tracker.add(item1);
         tracker.add(item2);
-        Item[] result = tracker.findByName("test0");
+        List<Item> result = tracker.findByName("test0");
         for (Item item : result) {
             assertThat(item.getName(), is("test0"));
         }
