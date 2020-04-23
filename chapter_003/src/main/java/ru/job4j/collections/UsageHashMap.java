@@ -2,7 +2,6 @@ package ru.job4j.collections;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 
 public class UsageHashMap {
 	public static void main(String[] args) {
