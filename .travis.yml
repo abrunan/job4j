@@ -21,4 +21,4 @@ notifications:
 
 env:
   global:
-    - CODECOV_TOKEN="b5353c7f-df4e-4a92-ae6f-fe6f23acc473"
+    - CODECOV_TOKEN="b5353c7f-df4e-4a92-ae6f-fe6f23acc473"git push origin master
